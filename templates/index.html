@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CRUD Opeartions</title>
+	<link rel="stylesheet" href="/static/form.css">
+</head>
+<body>
+	<div class = "container">
+		<form action="/" method="POST" enctype="multipart/form-data">
+		<div class = "title">
+			<h1>Registration Form</h1>
+		</div>
+			<div class = "title">
+			OWNER DETAILS
+			</div>
+		<div class = "form">
+			<div class = "input_field">
+				<label>Owner Name</label>
+				<input type="text" class="input" name="fname" required>
+			</div>
+			<div class = "input_field">
+				<label>Email Address</label>
+				<input type="text" class="input" name="email" required>
+			</div>
+
+			<div class = "input_field">
+				<label>Phone Number</label>
+				<input type="text" class="input" name="phone" required>
+			</div>
+			<div class = "input_field">
+				<label>Address</label>
+				<textarea class ="textarea" name="address" required></textarea>
+			</div>
+
+
+			<div class = "title">
+			CAR DETAILS
+			</div>
+			<div class = "input_field">
+				<label>Car Model Name</label>
+				<input type="text" class="input" name="modalname" required>
+			</div>
+			<div class = "input_field">
+				<label>Year of Purchase</label>
+				<input type="text" class="input" name="year" required>
+			</div>
+			<div class = "input_field">
+				<label>Fuel Type</label>
+				<div class="custom_select">
+				<select name="fuel" required >
+					<option value="">Select</option>
+					<option value="Petrol">Petrol</option>
+					<option value="Disel">Disel</option>
+				</select>
+				</div>
+			</div>
+			<div class = "input_field">
+				<label>Kilometers Travelled</label>
+				<input type="text" class="input" name="kilometer">
+			</div>
+			<div class = "input_field">
+				<label>Car Number</label>
+				<input type="text" class="input" name="carnumber" required>
+			</div>
+			<div class = "input_field">
+				<label>Car Color</label>
+				<input type="text" class="input" name="color" required>
+			</div>
+			<div class = "input_field">
+				<!--<input type="submit" value = "Register" class ="btn" name="register">-->
+				 <label for="files">Select files:</label>
+				  <input type="file" id="files" name="file" autocomplete="off" ><br><br>
+
+			</div>
+			<div class = "input_field">
+				<label class = "check">
+					<input type="checkbox" required>
+					<span class = "checkmark"></span>
+				</label>
+				<p>Agree to terms and conditions</p>
+			</div>
+			<div class = "input_field">
+				<input type = "submit"  value = "Register" class ="btn" name="register">
+			</div>
+
+
+			<!--<div class = "input_field">
+				<input  type = "button" formmethod = "get" value = "CLICK" class ="btn" name="register">
+			</div>-->
+
+		</div>
+		
+		</form>
+		<form action="/getdata" method="get" >
+				<div class="input_field">
+					<input type="submit" value="Click" class="btn" name="register" />
+				  </div>
+      </form>
+	</div>
+
+</body>
+</html>

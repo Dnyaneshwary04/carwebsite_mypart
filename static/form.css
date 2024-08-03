@@ -1,0 +1,216 @@
+*
+{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+
+}
+body
+{
+
+    /*background-color : darkcyan;*/
+    background-image: url("car3.webp");
+    background-size:cover;
+    opacity:0.75;
+	padding: 0 10px;
+}
+.container
+{
+	border: 2px;
+	max-width: 700px;
+	width: 100%;
+	background-color: white;
+	margin: 20px auto;
+	padding: 30px;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+	/*box-shadow:0 0 10px;*/
+}
+.container .title
+{
+	font-size: 28px;
+	font-weight: 700;
+	margin-bottom: 25px;
+	color:darkcyan;
+	text-transform: uppercase;
+	text-align: center;
+	/*font-size: 35px;
+      font-weight: 700;
+      font-family:  sans-serif;
+      margin-bottom: 25px;
+      color: darkcyan;
+      text-transform: uppercase;
+      text-shadow: 1px 1px 0px #957dad,
+               1px 2px 0px #957dad,
+               1px 3px 0px #957dad,
+               1px 4px 0px #957dad,
+               1px 5px 0px #957dad,
+               1px 6px 0px #957dad,
+               1px 10px 5px rgba(16, 16, 16, 0.5),
+               1px 15px 10px rgba(16, 16, 16, 0.4),
+               1px 20px 30px rgba(16, 16, 16, 0.3),
+               1px 25px 50px rgba(16, 16, 16, 0.2);
+               text-align: center;*/
+
+}
+.container .form
+{
+	width: 100%;
+}
+.container .form .input_field
+{
+	margin-bottom: 15px;
+	display: flex;
+	align-items:center ;
+}
+.container .form .input_field label
+{
+	width: 150px;
+	margin-right:18px ;
+
+	font-size: 18px;
+
+
+}
+.container .form .input_field .input
+{
+	width: 70%;
+	outline: none;
+	margin-left:45px;
+	border: 1px  solid darkcyan;
+	font-size:15px ;
+	padding: 8px 9px;
+	border-radius: 4px;
+	transition: all 0.5s ease;
+}
+.container .form .input_field .textarea
+{
+	resize: none;
+	width: 70%;
+	margin-left:45px;
+	height: 70px;
+	border: 1px solid darkcyan;
+	border-radius: 4px;
+}
+.container .form .input_field .custom_select
+{
+	position:relative ;
+	width: 70%;
+	height: 37px;
+}
+.container .form .input_field .custom_select select
+{
+	-webkit-appearance: none;
+	appearance: none;
+	margin-left:43px;
+	position: relative;
+	width: 70%;
+	height: 40px;
+	padding: 8px 9px;
+	border: 1px solid darkcyan;
+	border-radius: 4px;
+    outline: none;
+}
+.container .form .input_field .custom_select:before
+{
+	content: "";
+	position: absolute;
+	/*margin-left:45px;*/
+	top: 0;
+	right: 0;
+	border: 8px solid black;
+	border-color: darkcyan transparent transparent transparent;
+	pointer-events: none;
+}
+.container .form .input_field .input:focus,
+.container .form .input_field .textarea:focus,
+.container .form .input_field select:focus
+{
+	border: 1px solid darkcyan;
+}
+.container .form .input_field p
+{
+	font-size: 14px;
+	color: #757575;
+
+}
+.container .form .input_field .check
+{
+	width: 15px;
+	height: 15px;
+	position: relative;
+	display: block;
+	cursor: pointer;
+}
+.container .form .input_field .check input[type="checkbox"]
+{
+	position: absolute;
+	top:0;
+	left: 0;
+	opacity: 0;
+}
+
+.container .form .input_field .check .checkmark
+{
+	width: 15px;
+	height: 15px;
+	border: 1px solid darkcyan;
+	display: block;
+	position: relative;
+
+}
+.container .form .input_field .check .checkmark:before
+{
+	content: "";
+	position: absolute;
+	top: 1px;
+	left: 2px;
+	width: 5px;
+	height: 2px;
+	border: 2px solid;
+	border-color:  transparent transparent white white;
+	transform: rotate(-45deg);
+}
+.container .form .input_field .check input[type="checkbox"]:checked ~ .checkmark
+{
+	background: darkcyan;
+}
+.container .form .input_field .check input[type="checkbox"]:checked ~ .checkmark:before
+{
+	display: block;
+}
+.container .form .input_field .btn
+{
+	width: 100%;
+	padding: 8px 9px;
+	font-size: 15px;
+	border: 0;
+	background: darkcyan;
+	color: white;
+	cursor: pointer;
+	border-radius: 4px;
+	outline: none;
+}
+.container .form .input_field:last-child
+{
+	margin-bottom: 0;
+}
+.container .form .input_field .btn:hover
+{
+	background: darkblue;
+}
+@media (max-width: 420px)
+{
+	.container .form .input_field
+	{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.container .form .input_field label
+	{
+		margin-bottom: 5px;
+	}
+	.container .form .input_field.terms
+	{
+		flex-direction: row;
+	}
+}
